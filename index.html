@@ -210,15 +210,7 @@ section{scroll-margin-top:96px}
 
 /* Atmosphere */
 .atmos{background:var(--bg-2)}
-.atmos-photo{border-radius:28px;overflow:hidden;position:relative}
-.atmos-photo img{width:100%;aspect-ratio:16/8;object-fit:cover}
-.atmos-quote{
-  position:absolute;right:24px;bottom:24px;max-width:380px;padding:22px 24px;border-radius:18px;
-  background:rgba(21,17,14,.78);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border:1px solid var(--line)
-}
-.atmos-quote p{font:italic 500 22px/1.3 var(--serif)}
-.atmos-quote span{display:block;margin-top:10px;font-size:13px;color:var(--muted)}
-.perks{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:24px}
+.perks{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .perk{padding:26px;border-radius:var(--radius);background:var(--surface);border:1px solid var(--line)}
 .perk .icon{width:26px;height:26px;color:var(--ember)}
 .perk h3{font-size:24px;margin:18px 0 8px}
@@ -326,8 +318,6 @@ section{scroll-margin-top:96px}
   .section-head{flex-direction:column;align-items:flex-start}
   .contact-grid{grid-template-columns:1fr}
   .map{min-height:340px}
-  .atmos-photo img{aspect-ratio:4/3}
-  .atmos-quote{position:static;max-width:none;margin-top:16px;background:var(--surface)}
   .header .btn-call{display:none}
   .header-phone{display:inline-flex;width:44px;height:44px;min-height:44px;padding:0}
   .dock{display:flex}
@@ -541,14 +531,6 @@ section{scroll-margin-top:96px}
           <h2 id="salon-title" class="reveal">Без очередей<br>и&nbsp;суеты</h2>
         </div>
         <p class="reveal">Небольшой уютный салон, где вас встретят по&nbsp;имени, нальют кофе и&nbsp;никуда не&nbsp;будут торопить.</p>
-      </div>
-
-      <div class="atmos-photo reveal">
-        <img src="img/interior.webp" width="1600" height="904" loading="lazy" alt="Рабочее место в салоне: кожаное кресло, круглое зеркало, кофе на мраморной полке">
-        <div class="atmos-quote">
-          <p>«Зашёл без записи — приняли быстро, без лишней суеты».</p>
-          <span>Владимир, отзыв в 2ГИС</span>
-        </div>
       </div>
 
       <div class="perks">
