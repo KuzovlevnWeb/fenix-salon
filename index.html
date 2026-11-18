@@ -1,0 +1,763 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Феникс — салон красоты в Калининграде</title>
+<meta name="description" content="Салон красоты «Феникс» в Калининграде: стрижки, окрашивание, AirTouch, мужские стрижки и борода. Ленинский проспект, 133-151. Ежедневно 09:00–20:00. Рейтинг 5.0 в 2ГИС.">
+<meta name="theme-color" content="#15110E">
+<meta property="og:title" content="Феникс — салон красоты в Калининграде">
+<meta property="og:description" content="Твой образ готов к выходу. Красота без очередей и суеты.">
+<meta property="og:image" content="img/hero.webp">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2315110E'/%3E%3Cpath d='M16 4c1 5 6 7 6 13a6 6 0 0 1-12 0c0-3 2-5 3-6 0 2 1 3 2 3 0-4-1-7 1-10z' fill='%23E07A3F'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/hero.webp">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BeautySalon",
+  "name": "Феникс",
+  "slogan": "Твой образ готов к выходу. Красота без очередей и суеты.",
+  "image": "img/hero.webp",
+  "telephone": ["+79628171652", "+79635395539"],
+  "email": "geier2003@yandex.ru",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Ленинский проспект, 133-151",
+    "addressLocality": "Калининград",
+    "postalCode": "236039",
+    "addressCountry": "RU"
+  },
+  "openingHours": "Mo-Su 09:00-20:00",
+  "paymentAccepted": "Наличные, перевод с карты, оплата по QR-коду",
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "ratingCount": "31" }
+}
+</script>
+
+<style>
+:root{
+  --bg:#15110E;
+  --bg-2:#1C1612;
+  --surface:#231C17;
+  --line:rgba(244,236,227,.12);
+  --ink:#F4ECE3;
+  --muted:#BDAE9F;
+  --ember:#E07A3F;
+  --ember-2:#F2A25F;
+  --gold:#D9A55B;
+  --cream:#F3EBE1;
+  --cream-2:#EADFD1;
+  --ink-dark:#251D17;
+  --muted-dark:#66564A;
+  --ember-dark:#A24A1A;
+
+  --serif:"Cormorant Garamond", "Times New Roman", serif;
+  --sans:"Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --wrap:1200px;
+  --gutter:clamp(16px, 4vw, 40px);
+  --radius:20px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+
+  --z-header:30;
+  --z-dock:40;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font:400 17px/1.65 var(--sans);
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.02;letter-spacing:-.01em;margin:0}
+p{margin:0}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gutter)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:2px solid var(--ember-2);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:12px;top:-60px;z-index:100;background:var(--ember);color:#1A0F08;padding:10px 16px;border-radius:10px;font-weight:600}
+.skip:focus{top:12px}
+
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font:600 12px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--gold);
+}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor;opacity:.7}
+.icon{width:20px;height:20px;flex:none;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+
+/* Buttons */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  min-height:52px;padding:0 26px;border-radius:999px;cursor:pointer;
+  font:600 16px/1 var(--sans);letter-spacing:.01em;border:1px solid transparent;
+  transition:background-color .2s var(--ease), color .2s var(--ease), border-color .2s var(--ease), box-shadow .2s var(--ease);
+}
+.btn-primary{background:var(--ember);color:#1A0F08;box-shadow:0 10px 30px -12px rgba(224,122,63,.7)}
+.btn-primary:hover{background:var(--ember-2)}
+.btn-ghost{border-color:var(--line);color:var(--ink)}
+.btn-ghost:hover{border-color:rgba(244,236,227,.4);background:rgba(244,236,227,.05)}
+
+/* Header */
+.header{
+  position:fixed;z-index:var(--z-header);top:12px;left:12px;right:12px;
+  transition:transform .3s var(--ease);
+}
+.header-inner{
+  max-width:calc(var(--wrap) + 24px);margin:0 auto;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:10px 10px 10px 20px;border-radius:999px;
+  background:rgba(21,17,14,.72);border:1px solid var(--line);
+  -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+}
+.logo{display:flex;align-items:center;gap:10px;font:600 26px/1 var(--serif);letter-spacing:.02em}
+.logo svg{width:28px;height:28px}
+.nav{display:flex;gap:4px}
+.nav a{padding:10px 14px;border-radius:999px;font-size:15px;color:var(--muted);transition:color .2s var(--ease), background-color .2s var(--ease)}
+.nav a:hover{color:var(--ink);background:rgba(244,236,227,.06)}
+.header .btn{min-height:44px;padding:0 20px;font-size:15px}
+.header-phone{display:none}
+
+/* Hero */
+.hero{position:relative;padding:132px 0 72px;overflow:hidden}
+.hero::before{
+  content:"";position:absolute;inset:-20% -10% auto auto;width:70vw;height:70vw;max-width:900px;max-height:900px;
+  background:radial-gradient(closest-side, rgba(224,122,63,.22), rgba(224,122,63,0) 70%);
+  pointer-events:none;
+}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,5vw,72px);align-items:center}
+.hero h1{font-size:clamp(52px, 7.4vw, 108px);margin:22px 0 22px}
+.hero h1 em{font-style:italic;color:var(--ember-2)}
+.lead{font-size:clamp(18px,1.6vw,21px);color:var(--muted);max-width:30ch}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+.rating{
+  display:inline-flex;align-items:center;gap:14px;margin-top:40px;padding:12px 18px 12px 14px;
+  border:1px solid var(--line);border-radius:16px;background:rgba(244,236,227,.03);transition:border-color .2s var(--ease)
+}
+.rating:hover{border-color:rgba(244,236,227,.3)}
+.rating-score{font:600 34px/1 var(--serif)}
+.stars{display:flex;gap:2px;color:var(--gold)}
+.stars svg{width:16px;height:16px;fill:currentColor}
+.rating small{display:block;font-size:13px;color:var(--muted);margin-top:4px}
+
+.hero-media{position:relative}
+.hero-photo{
+  position:relative;aspect-ratio:4/5;border-radius:999px 999px 28px 28px;overflow:hidden;
+  box-shadow:0 40px 80px -40px rgba(0,0,0,.8);
+}
+.hero-photo img{width:100%;height:100%;object-fit:cover}
+.hero-badge{
+  position:absolute;left:-28px;bottom:48px;display:flex;align-items:center;gap:12px;
+  padding:14px 18px;border-radius:16px;background:var(--cream);color:var(--ink-dark);
+  box-shadow:0 24px 50px -20px rgba(0,0,0,.7);font-size:14px;line-height:1.35
+}
+.hero-badge b{display:block;font-size:15px}
+.hero-badge .dot{width:10px;height:10px;border-radius:50%;background:#2F9E5B;box-shadow:0 0 0 4px rgba(47,158,91,.18);flex:none}
+
+.facts{
+  margin-top:72px;display:grid;grid-template-columns:repeat(3,1fr);
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line)
+}
+.fact{display:flex;gap:14px;align-items:flex-start;padding:24px 24px 24px 0}
+.fact + .fact{padding-left:24px;border-left:1px solid var(--line)}
+.fact .icon{color:var(--ember);margin-top:3px}
+.fact b{display:block;font-weight:600}
+.fact span{color:var(--muted);font-size:15px}
+
+/* Sections */
+section{scroll-margin-top:96px}
+.section{padding:clamp(80px,10vw,140px) 0}
+.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-bottom:56px}
+.section-head h2{font-size:clamp(40px,5.2vw,72px);margin-top:16px}
+.section-head p{max-width:40ch;color:var(--muted)}
+
+/* Services */
+.services-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,64px);align-items:start}
+.service-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.service{
+  display:grid;grid-template-columns:auto 1fr auto;gap:20px;align-items:baseline;
+  padding:26px 0;border-bottom:1px solid var(--line)
+}
+.service-num{font:500 15px/1 var(--serif);font-style:italic;color:var(--gold);width:28px}
+.service h3{font-size:clamp(26px,2.4vw,32px)}
+.service p{color:var(--muted);font-size:15px;margin-top:8px;max-width:42ch}
+.price{font-weight:600;white-space:nowrap;font-size:15px;color:var(--ink)}
+.price.muted{color:var(--muted);font-weight:500}
+.price-group{padding:28px 0 30px;border-top:1px solid var(--line)}
+.price-group:last-of-type{border-bottom:1px solid var(--line)}
+.price-head{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:baseline}
+.price-head h3{font-size:clamp(28px,2.6vw,36px)}
+.price-head p{color:var(--muted);font-size:15px;margin-top:8px;max-width:46ch}
+.price-list{list-style:none;margin:20px 0 0 48px;padding:0}
+.price-list li{display:flex;align-items:baseline;gap:12px;padding:9px 0;font-size:16px}
+.price-list li::after{content:"";order:2;flex:1;border-bottom:1px dotted rgba(244,236,227,.22);transform:translateY(-4px)}
+.price-list span{order:1}
+.price-list b{order:3;font-weight:600;white-space:nowrap;color:var(--ink);font-variant-numeric:tabular-nums}
+.services-note{margin-top:22px;font-size:14px;color:var(--muted)}
+.services-photos{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start;position:sticky;top:110px}
+.services-photos figure{margin:0;border-radius:var(--radius);overflow:hidden;position:relative}
+.services-photos figure:nth-child(even){transform:translateY(56px)}
+.services-photos figure:nth-child(even).reveal:not(.in){transform:translateY(80px)}
+.services-photos img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.services-photos figcaption{
+  position:absolute;left:12px;bottom:12px;padding:6px 12px;border-radius:999px;
+  background:rgba(21,17,14,.72);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);font-size:13px
+}
+
+/* Atmosphere */
+.atmos{background:var(--bg-2)}
+.atmos-photo{border-radius:28px;overflow:hidden;position:relative}
+.atmos-photo img{width:100%;aspect-ratio:16/8;object-fit:cover}
+.atmos-quote{
+  position:absolute;right:24px;bottom:24px;max-width:380px;padding:22px 24px;border-radius:18px;
+  background:rgba(21,17,14,.78);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border:1px solid var(--line)
+}
+.atmos-quote p{font:italic 500 22px/1.3 var(--serif)}
+.atmos-quote span{display:block;margin-top:10px;font-size:13px;color:var(--muted)}
+.perks{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:24px}
+.perk{padding:26px;border-radius:var(--radius);background:var(--surface);border:1px solid var(--line)}
+.perk .icon{width:26px;height:26px;color:var(--ember)}
+.perk h3{font-size:24px;margin:18px 0 8px}
+.perk p{font-size:15px;color:var(--muted)}
+
+/* Reviews — light section */
+.reviews{background:var(--cream);color:var(--ink-dark)}
+.reviews .eyebrow{color:var(--ember-dark)}
+.reviews .section-head p{color:var(--muted-dark)}
+.score-card{display:flex;align-items:center;gap:20px}
+.score-card .big{font:500 88px/0.9 var(--serif)}
+.score-card .stars{color:#B7791F}
+.score-card .stars svg{width:20px;height:20px}
+.score-card small{display:block;color:var(--muted-dark);font-size:14px;margin-top:8px}
+.review-grid{columns:3 320px;column-gap:20px}
+.review{
+  break-inside:avoid;margin:0 0 20px;padding:28px;border-radius:var(--radius);
+  background:#FBF7F2;border:1px solid rgba(37,29,23,.08)
+}
+.review blockquote{margin:0;font-size:16px;line-height:1.65}
+.review blockquote::before{content:"“";display:block;font:500 56px/0.6 var(--serif);color:var(--ember-dark);margin-bottom:10px}
+.review footer{display:flex;align-items:center;gap:12px;margin-top:20px}
+.avatar{
+  width:40px;height:40px;border-radius:50%;display:grid;place-items:center;flex:none;
+  background:var(--cream-2);color:var(--ember-dark);font-weight:700;font-size:14px
+}
+.review cite{font-style:normal;font-weight:600;font-size:15px;display:block}
+.review .tag{font-size:13px;color:var(--muted-dark)}
+.reviews-more{display:flex;justify-content:center;margin-top:32px}
+.btn-dark{background:var(--ink-dark);color:var(--cream)}
+.btn-dark:hover{background:#3A2E25}
+
+/* Contacts */
+.contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(32px,5vw,64px);align-items:stretch}
+.contact-list{list-style:none;margin:32px 0 0;padding:0;display:grid;gap:4px}
+.contact-item{display:flex;gap:16px;align-items:flex-start;padding:18px 0;border-bottom:1px solid var(--line)}
+.contact-item .icon{color:var(--ember);margin-top:4px}
+.contact-item small{display:block;color:var(--muted);font-size:13px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px}
+.contact-item a{transition:color .2s var(--ease)}
+.contact-item a:hover{color:var(--ember-2)}
+.contact-item .phones a{display:block;font-size:20px;font-weight:600}
+.pay{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.chip{padding:6px 12px;border-radius:999px;border:1px solid var(--line);font-size:14px;color:var(--muted)}
+.map{border-radius:28px;overflow:hidden;min-height:460px;background:var(--surface);border:1px solid var(--line);position:relative}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(.25) contrast(1.05)}
+
+/* CTA band */
+.cta-band{padding:0 0 clamp(80px,10vw,120px)}
+.cta-box{
+  position:relative;overflow:hidden;border-radius:32px;padding:clamp(40px,6vw,80px);
+  background:linear-gradient(135deg,#3A1E10 0%, #1E1510 60%);border:1px solid var(--line);
+  display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap
+}
+.cta-box::after{
+  content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;
+  background:radial-gradient(closest-side, rgba(242,162,95,.35), transparent);pointer-events:none
+}
+.cta-box h2{font-size:clamp(38px,4.6vw,64px);max-width:16ch;position:relative}
+.cta-box .hero-cta{margin-top:0;position:relative}
+
+/* Footer */
+.footer{border-top:1px solid var(--line);padding:32px 0 40px;color:var(--muted);font-size:14px}
+.footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.footer a:hover{color:var(--ink)}
+
+/* Mobile dock */
+.dock{
+  position:fixed;z-index:var(--z-dock);left:12px;right:12px;bottom:12px;display:none;gap:8px;
+  padding:8px;border-radius:999px;background:rgba(21,17,14,.88);border:1px solid var(--line);
+  -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+  padding-bottom:calc(8px + env(safe-area-inset-bottom) * .5)
+}
+.dock .btn{flex:1;min-height:48px;padding:0 14px;font-size:15px}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease), transform .7s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.hero-photo img{transform:scale(1.06);transition:transform 1.6s var(--ease)}
+.loaded .hero-photo img{transform:none}
+
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+  .hero-photo img{transform:none;transition:none}
+  *{transition-duration:.01ms!important}
+}
+
+/* Responsive */
+@media (max-width:1024px){
+  .nav{display:none}
+  .perks{grid-template-columns:1fr 1fr}
+  .services-grid{grid-template-columns:1fr}
+  .services-photos{position:static}
+}
+@media (max-width:860px){
+  .hero{padding-top:108px}
+  .hero-grid{grid-template-columns:1fr}
+  .hero-media{max-width:520px;width:100%;margin:0 auto;order:-1}
+  .hero-photo{aspect-ratio:4/4.4}
+  .hero-badge{left:12px;bottom:16px}
+  .lead{max-width:none}
+  .facts{grid-template-columns:1fr;margin-top:48px}
+  .fact{padding:18px 0}
+  .fact + .fact{padding-left:0;border-left:0;border-top:1px solid var(--line)}
+  .section-head{flex-direction:column;align-items:flex-start}
+  .contact-grid{grid-template-columns:1fr}
+  .map{min-height:340px}
+  .atmos-photo img{aspect-ratio:4/3}
+  .atmos-quote{position:static;max-width:none;margin-top:16px;background:var(--surface)}
+  .header .btn-call{display:none}
+  .header-phone{display:inline-flex;width:44px;height:44px;min-height:44px;padding:0}
+  .dock{display:flex}
+  body{padding-bottom:84px}
+}
+@media (max-width:560px){
+  body{font-size:16px}
+  .perks{grid-template-columns:1fr}
+  .price-list{margin-left:0}
+  .price-list li{font-size:15px;gap:8px}
+  .services-photos{gap:10px;padding-bottom:28px}
+  .services-photos figure:nth-child(even){transform:translateY(28px)}
+  .services-photos figcaption{font-size:12px;left:8px;bottom:8px;padding:5px 10px}
+  .hero-cta .btn{flex:1 1 100%}
+  .rating{width:100%}
+  .score-card .big{font-size:72px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Перейти к содержанию</a>
+
+<!-- SVG sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+    <symbol id="i-bus" viewBox="0 0 24 24"><path d="M8 6v6M16 6v6M2 12h20M7 18h10M18 18h2a2 2 0 0 0 2-2V7a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v9a2 2 0 0 0 2 2h2"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></symbol>
+    <symbol id="i-coffee" viewBox="0 0 24 24"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><path d="M6 2v2M10 2v2M14 2v2"/></symbol>
+    <symbol id="i-door" viewBox="0 0 24 24"><path d="M13 4h3a2 2 0 0 1 2 2v14"/><path d="M2 20h3"/><path d="M13 20h9"/><path d="M10 12v.01"/><path d="M13 4.56v16.16a1 1 0 0 1-1.24.97L5 20V5.56a2 2 0 0 1 1.51-1.94l4-1A2 2 0 0 1 13 4.56Z"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></symbol>
+    <symbol id="i-paw" viewBox="0 0 24 24"><circle cx="11" cy="4" r="2"/><circle cx="18" cy="8" r="2"/><circle cx="20" cy="16" r="2"/><path d="M9 10a5 5 0 0 1 5 5v3.5a3.5 3.5 0 0 1-6.84 1.05Q6.52 17.48 4.46 16.84A3.5 3.5 0 0 1 5.5 10Z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95z"/></symbol>
+    <symbol id="i-phoenix" viewBox="0 0 32 32"><path d="M16 3c1.2 5.2 7 7.6 7 14.2A7 7 0 0 1 9 17.2c0-3.4 2-5.6 3.4-6.8 0 2.2 1 3.6 2.4 3.8C14 10 13.8 6.6 16 3z"/><path d="M16 29c-2.4 0-4-1.7-4-3.9 0-2.4 2.2-3.6 2.6-5.6 1.6 1.2 5.4 2.6 5.4 5.6 0 2.2-1.6 3.9-4 3.9z" opacity=".55"/></symbol>
+  </defs>
+</svg>
+
+<header class="header" id="top">
+  <div class="header-inner">
+    <a href="#top" class="logo" aria-label="Феникс — на главную">
+      <svg aria-hidden="true" fill="#E07A3F"><use href="#i-phoenix"/></svg>
+      Феникс
+    </a>
+    <nav class="nav" aria-label="Основная навигация">
+      <a href="#services">Услуги</a>
+      <a href="#salon">Салон</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <a class="btn btn-primary btn-call" href="tel:+79628171652">
+      <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
+      Записаться
+    </a>
+    <a class="btn btn-primary header-phone" href="tel:+79628171652" aria-label="Позвонить: +7 962 817-16-52">
+      <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
+    </a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <span class="eyebrow reveal">Салон красоты · Калининград</span>
+          <h1 id="hero-title" class="reveal">Твой образ готов <em>к&nbsp;выходу</em></h1>
+          <p class="lead reveal">Красота без очередей и&nbsp;суеты. Женские и&nbsp;мужские стрижки, сложное окрашивание и&nbsp;уход&nbsp;— в&nbsp;двух минутах от&nbsp;остановки «Багратиона».</p>
+          <div class="hero-cta reveal">
+            <a class="btn btn-primary" href="tel:+79628171652">
+              <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
+              Позвонить и записаться
+            </a>
+            <a class="btn btn-ghost" href="#contacts">Как добраться</a>
+          </div>
+          <a class="rating reveal" href="https://2gis.ru/kaliningrad/firm/70000001117666814/tab/reviews" target="_blank" rel="noopener" aria-label="Рейтинг 5 из 5, 31 оценка в 2ГИС — открыть отзывы">
+            <span class="rating-score">5.0</span>
+            <span>
+              <span class="stars" aria-hidden="true">
+                <svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg>
+              </span>
+              <small>31 оценка в 2ГИС</small>
+            </span>
+          </a>
+        </div>
+
+        <div class="hero-media">
+          <div class="hero-photo">
+            <img src="img/hero.webp" width="1600" height="2000" alt="Девушка с длинными медными волосами после окрашивания и укладки в салоне «Феникс»" fetchpriority="high">
+          </div>
+          <div class="hero-badge" id="open-badge" aria-live="polite">
+            <span class="dot" aria-hidden="true"></span>
+            <span><b data-open-title>Открыто ежедневно</b><span data-open-sub>с 09:00 до 20:00</span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="facts reveal">
+        <div class="fact">
+          <svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>
+          <div><b>Ежедневно 09:00–20:00</b><span>Без выходных</span></div>
+        </div>
+        <div class="fact">
+          <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
+          <div><b>Ленинский проспект, 133-151</b><span>Московский район</span></div>
+        </div>
+        <div class="fact">
+          <svg class="icon" aria-hidden="true"><use href="#i-bus"/></svg>
+          <div><b>200 м от остановки</b><span>«Багратиона», 2 минуты пешком</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section" id="services" aria-labelledby="services-title">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow reveal">Услуги</span>
+          <h2 id="services-title" class="reveal">Что мы делаем<br>лучше всего</h2>
+        </div>
+        <p class="reveal">Слушаем, что вы хотите, честно говорим, что подойдёт волосам, и&nbsp;делаем аккуратно&nbsp;— без навязывания лишнего.</p>
+      </div>
+
+      <div class="services-grid">
+        <div>
+          <div class="price-group reveal">
+            <div class="price-head">
+              <span class="service-num">01</span>
+              <div>
+                <h3>Стрижки</h3>
+                <p>Подберём форму под лицо и структуру волос&nbsp;— чтобы стрижка ложилась сама, даже без укладки.</p>
+              </div>
+            </div>
+            <ul class="price-list">
+              <li><span>Женская стрижка</span><b>1 500–2 000 ₽</b></li>
+              <li><span>Мужская стрижка</span><b>1 000–1 500 ₽</b></li>
+              <li><span>Стрижка кончиков</span><b>1 500 ₽</b></li>
+              <li><span>Детская стрижка</span><b>1 000 ₽</b></li>
+              <li><span>Стрижка чёлки</span><b>350–700 ₽</b></li>
+            </ul>
+          </div>
+
+          <div class="price-group reveal">
+            <div class="price-head">
+              <span class="service-num">02</span>
+              <div>
+                <h3>Окрашивание</h3>
+                <p>Насыщенный цвет без рыжины и&nbsp;желтизны, мягкие переходы, бережно к&nbsp;волосам. Выход из&nbsp;чёрного и&nbsp;коррекция цвета&nbsp;— после консультации.</p>
+              </div>
+            </div>
+            <ul class="price-list">
+              <li><span>Однотонное окрашивание</span><b>3 500–7 000 ₽</b></li>
+              <li><span>Мелирование</span><b>5 000–15 000 ₽</b></li>
+              <li><span>Тотал блонд</span><b>6 000–15 000 ₽</b></li>
+              <li><span>AirTouch</span><b>7 000–15 000 ₽</b></li>
+              <li><span>Шатуш</span><b>7 000–15 000 ₽</b></li>
+              <li><span>Бразильское окрашивание</span><b>7 000–12 000 ₽</b></li>
+            </ul>
+          </div>
+
+          <div class="price-group reveal">
+            <div class="price-head">
+              <span class="service-num">03</span>
+              <div>
+                <h3>Уход</h3>
+                <p>Восстановление для уставших и&nbsp;повреждённых волос.</p>
+              </div>
+            </div>
+            <ul class="price-list">
+              <li><span>Холодное восстановление</span><b>2 500–5 000 ₽</b></li>
+              <li><span>Мытьё головы</span><b>500–1 000 ₽</b></li>
+            </ul>
+          </div>
+          <p class="services-note reveal">Итоговая стоимость зависит от длины и&nbsp;густоты волос, а&nbsp;для окрашивания&nbsp;— ещё и&nbsp;от&nbsp;исходного цвета. Точную цену мастер назовёт до&nbsp;начала работы.</p>
+        </div>
+
+        <div class="services-photos">
+          <figure class="reveal">
+            <img src="img/women.webp" width="1600" height="2000" loading="lazy" alt="Мастер ножницами выравнивает срез гладкого каре">
+            <figcaption>Женские стрижки</figcaption>
+          </figure>
+          <figure class="reveal">
+            <img src="img/color.webp" width="1600" height="2000" loading="lazy" alt="Мастер наносит осветлитель на прядь в технике балаяж">
+            <figcaption>Окрашивание</figcaption>
+          </figure>
+          <figure class="reveal">
+            <img src="img/men.webp" width="1600" height="2000" loading="lazy" alt="Мужская стрижка с чётким контуром и оформленной бородой">
+            <figcaption>Мужские стрижки</figcaption>
+          </figure>
+          <figure class="reveal">
+            <img src="img/care.webp" width="1600" height="2000" loading="lazy" alt="Мастер наносит восстанавливающую маску на волосы клиентки у мойки">
+            <figcaption>Уход и восстановление</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ATMOSPHERE -->
+  <section class="section atmos" id="salon" aria-labelledby="salon-title">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow reveal">Салон</span>
+          <h2 id="salon-title" class="reveal">Без очередей<br>и&nbsp;суеты</h2>
+        </div>
+        <p class="reveal">Небольшой уютный салон, где вас встретят по&nbsp;имени, нальют кофе и&nbsp;никуда не&nbsp;будут торопить.</p>
+      </div>
+
+      <div class="atmos-photo reveal">
+        <img src="img/interior.webp" width="1600" height="904" loading="lazy" alt="Рабочее место в салоне: кожаное кресло, круглое зеркало, кофе на мраморной полке">
+        <div class="atmos-quote">
+          <p>«Зашёл без записи — приняли быстро, без лишней суеты».</p>
+          <span>Владимир, отзыв в 2ГИС</span>
+        </div>
+      </div>
+
+      <div class="perks">
+        <div class="perk reveal">
+          <svg class="icon" aria-hidden="true"><use href="#i-door"/></svg>
+          <h3>Можно без записи</h3>
+          <p>Если мастер свободен&nbsp;— примем сразу. Чтобы не ждать, лучше позвонить заранее.</p>
+        </div>
+        <div class="perk reveal">
+          <svg class="icon" aria-hidden="true"><use href="#i-coffee"/></svg>
+          <h3>Кофе и напитки</h3>
+          <p>Кофе или холодный напиток, пока работает краска.</p>
+        </div>
+        <div class="perk reveal">
+          <svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg>
+          <h3>Бережно к волосам</h3>
+          <p>Честные рекомендации по&nbsp;домашнему уходу&nbsp;— только то, что действительно нужно.</p>
+        </div>
+        <div class="perk reveal">
+          <svg class="icon" aria-hidden="true"><use href="#i-paw"/></svg>
+          <h3>Можно с собакой</h3>
+          <p>Приходите вместе с&nbsp;питомцем&nbsp;— ему у&nbsp;нас тоже рады.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="section reviews" id="reviews" aria-labelledby="reviews-title">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow reveal">Отзывы</span>
+          <h2 id="reviews-title" class="reveal">Говорят гости</h2>
+        </div>
+        <div class="score-card reveal">
+          <span class="big">5.0</span>
+          <span>
+            <span class="stars" aria-hidden="true">
+              <svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg>
+            </span>
+            <small>31 оценка и 27 отзывов в 2ГИС</small>
+          </span>
+        </div>
+      </div>
+
+      <div class="review-grid">
+        <figure class="review reveal">
+          <blockquote>Красилась в первый раз. Результат превзошёл ожидания: цвет насыщенный, благородный, без рыжины и&nbsp;желтизны. Настя внимательно выслушала пожелания и&nbsp;предложила идеальный вариант.</blockquote>
+          <footer><span class="avatar" aria-hidden="true">А</span><span><cite>Анна Ш.</cite><span class="tag">Окрашивание</span></span></footer>
+        </figure>
+        <figure class="review reveal">
+          <blockquote>Зашёл в салон без записи — приняли быстро. Мастер сразу понял, что мне нужно: не «модно», а аккуратно и по делу. Чёткий контур, удобно укладывать. В салоне чисто, инструменты стерильные.</blockquote>
+          <footer><span class="avatar" aria-hidden="true">В</span><span><cite>Владимир В.</cite><span class="tag">Мужская стрижка</span></span></footer>
+        </figure>
+        <figure class="review reveal">
+          <blockquote>Несколько лет красилась дома и боялась, что от чёрного уже не избавиться. Мастер всё сделала спокойно, подробно рассказала. Удалось уйти от чёрного, волосы остались мягкими и не пересушенными.</blockquote>
+          <footer><span class="avatar" aria-hidden="true">А</span><span><cite>Анжелика Ч.</cite><span class="tag">Выход из чёрного</span></span></footer>
+        </figure>
+        <figure class="review reveal">
+          <blockquote>Коррекция AirTouch — действительно ювелирная работа. Цвет чистый, ровный, переходы мягкие, волосы выглядят ухоженно и дорого. Отдельное спасибо за честные рекомендации по уходу.</blockquote>
+          <footer><span class="avatar" aria-hidden="true">Э</span><span><cite>Элеонора С.</cite><span class="tag">AirTouch</span></span></footer>
+        </figure>
+        <figure class="review reveal">
+          <blockquote>Встретили очень приветливо, сразу предложили кофе. Мастер объяснила, что подойдёт именно для моей формы лица, и сделала стрижку, которая ложится сама собой — даже без укладки.</blockquote>
+          <footer><span class="avatar" aria-hidden="true">Е</span><span><cite>Елена К.</cite><span class="tag">Женская стрижка</span></span></footer>
+        </figure>
+        <figure class="review reveal">
+          <blockquote>Задача была — сделать рыжий красивый, без оттенка «тараканьего крыла». Сделали! Теперь в Москве никому не доверяю. Страстно рекомендую этот салон!</blockquote>
+          <footer><span class="avatar" aria-hidden="true">Н</span><span><cite>Наташа Н.</cite><span class="tag">Гостья из Москвы</span></span></footer>
+        </figure>
+      </div>
+
+      <div class="reviews-more reveal">
+        <a class="btn btn-dark" href="https://2gis.ru/kaliningrad/firm/70000001117666814/tab/reviews" target="_blank" rel="noopener">
+          Все отзывы в 2ГИС
+          <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTS -->
+  <section class="section" id="contacts" aria-labelledby="contacts-title">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div>
+          <span class="eyebrow reveal">Контакты</span>
+          <h2 id="contacts-title" class="reveal" style="font-size:clamp(40px,5.2vw,72px);margin-top:16px">Ждём вас<br>в&nbsp;«Фениксе»</h2>
+
+          <ul class="contact-list">
+            <li class="contact-item reveal">
+              <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
+              <div class="phones">
+                <small>Телефоны для записи</small>
+                <a href="tel:+79628171652">+7 962 817-16-52</a>
+                <a href="tel:+79635395539">+7 963 539-55-39</a>
+              </div>
+            </li>
+            <li class="contact-item reveal">
+              <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
+              <div>
+                <small>Адрес</small>
+                <a href="https://2gis.ru/kaliningrad/firm/70000001117666814" target="_blank" rel="noopener">Ленинский проспект, 133-151</a><br>
+                <span style="color:var(--muted)">Московский район, Калининград, 236039</span>
+              </div>
+            </li>
+            <li class="contact-item reveal">
+              <svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>
+              <div><small>Режим работы</small>Ежедневно с 09:00 до 20:00</div>
+            </li>
+            <li class="contact-item reveal">
+              <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>
+              <div><small>Почта</small><a href="mailto:geier2003@yandex.ru">geier2003@yandex.ru</a></div>
+            </li>
+          </ul>
+          <div class="reveal" style="margin-top:22px">
+            <small style="color:var(--muted);font-size:13px;letter-spacing:.06em;text-transform:uppercase">Оплата</small>
+            <div class="pay">
+              <span class="chip">Наличные</span>
+              <span class="chip">Перевод с карты</span>
+              <span class="chip">Оплата по QR-коду</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="map reveal">
+          <iframe
+            src="https://yandex.ru/map-widget/v1/?text=%D0%9A%D0%B0%D0%BB%D0%B8%D0%BD%D0%B8%D0%BD%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%2C%20133&z=16"
+            title="Карта: салон «Феникс», Ленинский проспект, 133-151, Калининград"
+            loading="lazy" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-band" aria-label="Запись">
+    <div class="wrap">
+      <div class="cta-box reveal">
+        <h2>Готовы к&nbsp;новому образу?</h2>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="tel:+79628171652">
+            <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
+            +7 962 817-16-52
+          </a>
+          <a class="btn btn-ghost" href="tel:+79635395539">+7 963 539-55-39</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <a href="#top" class="logo" style="font-size:22px" aria-label="Феникс — наверх">
+      <svg aria-hidden="true" fill="#E07A3F" style="width:22px;height:22px"><use href="#i-phoenix"/></svg>
+      Феникс
+    </a>
+    <span>Салон красоты · Ленинский проспект, 133-151, Калининград</span>
+    <span>© <span id="year">2026</span></span>
+  </div>
+</footer>
+
+<div class="dock" role="navigation" aria-label="Быстрые действия">
+  <a class="btn btn-primary" href="tel:+79628171652">
+    <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
+    Позвонить
+  </a>
+  <a class="btn btn-ghost" href="https://2gis.ru/kaliningrad/firm/70000001117666814" target="_blank" rel="noopener">
+    <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
+    Маршрут
+  </a>
+</div>
+
+<script>
+(function(){
+  document.getElementById('year').textContent = new Date().getFullYear();
+  requestAnimationFrame(function(){ document.documentElement.classList.add('loaded'); });
+
+  // Open / closed badge (Kaliningrad time, UTC+2)
+  try{
+    var now = new Date();
+    var klgd = new Date(now.getTime() + now.getTimezoneOffset()*60000 + 2*3600000);
+    var mins = klgd.getHours()*60 + klgd.getMinutes();
+    var open = mins >= 540 && mins < 1200;
+    var t = document.querySelector('[data-open-title]');
+    var s = document.querySelector('[data-open-sub]');
+    var dot = document.querySelector('#open-badge .dot');
+    if(open){ t.textContent = 'Сейчас открыто'; s.textContent = 'до 20:00, ждём вас'; }
+    else { t.textContent = 'Сейчас закрыто'; s.textContent = 'откроемся в 09:00';
+      dot.style.background = '#C0841A'; dot.style.boxShadow = '0 0 0 4px rgba(192,132,26,.2)'; }
+  }catch(e){}
+
+  // Reveal on scroll
+  var els = document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches){
+    els.forEach(function(el){ el.classList.add('in'); }); return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {rootMargin:'0px 0px -8% 0px', threshold:.08});
+  els.forEach(function(el, i){
+    el.style.transitionDelay = (el.closest('.hero') ? i*70 : 0) + 'ms';
+    io.observe(el);
+  });
+})();
+</script>
+</body>
+</html>
